@@ -3,9 +3,9 @@ import { ComponentTwoFactory } from "./component_two";
 import { CompositeFactory }    from "./composite";
 
 const main = () => {
-    const compositeTwo = ComponentTwoFactory.createComponentTwo();
-    const compositeOne = ComponentOneFactory.createComponentOne(compositeTwo);
-    const composite    = CompositeFactory.createComposite(compositeOne);
+    const componentTwo = ComponentTwoFactory.createComponentTwo();
+    const componentOne = ComponentOneFactory.createComponentOne(componentTwo);
+    const composite    = CompositeFactory.createComposite(componentOne);
 
     const response = composite.doSomethingComposite("Do something cool!");
     console.log(response);
